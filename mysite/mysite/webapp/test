@@ -1,0 +1,4 @@
+import aiml
+bot=aiml.Kernel()
+bot.learn("Desktop\AIML.aiml")
+while True: print bot.respond(raw_input("User> "))

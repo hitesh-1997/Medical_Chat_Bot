@@ -1,0 +1,53 @@
+<aiml version="1.0">
+
+
+
+<!-- This category works with the Anna and Wallace AIML sets -->
+<category>
+<pattern>LOAD AIML A</pattern>
+<template>
+<!-- only allow this operation if the "secure" predicate is set to yes. -->
+<learn>alice/reduction*.aiml</learn>
+
+</template>
+</category>
+
+<!-- This category works with the Standard AIML Set -->
+<category>
+<pattern>LOAD AIML B</pattern>
+<template>
+<!-- only allow this operation if the "secure" predicate is set to yes. -->
+
+        <!-- Load standard AIML set -->
+        <learn>alice/mp*.aiml</learn>
+
+        <!-- Load any Howie-specific AIML files -->
+        
+
+
+</template>
+</category>
+
+<category>
+<pattern>LOAD AIML C</pattern>
+<template>
+<!-- only allow this operation if the "secure" predicate is set to yes. -->
+
+	<learn>alice/medical.aiml</learn>
+	<learn>alice/body_part.aiml</learn>
+
+</template>
+</category>
+
+<!-- Loads an AIML file while the bot is running -->
+<category>
+<pattern>LOAD *</pattern>
+<template>
+<!-- only allow this operation if the "secure" predicate is set to yes. -->
+
+	<learn>alice/*.aiml</learn>
+
+</template>
+</category>
+
+</aiml>

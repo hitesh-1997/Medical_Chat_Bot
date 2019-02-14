@@ -1,0 +1,81 @@
+import nltk
+data = nltk.defaultdict(int)
+dis = nltk.defaultdict(int)
+data['sleep'] = 'SYMP'
+data['fever'] = 'SYMP'
+
+def sentenizer(str): #getting sentences
+    sent_tokenizer=nltk.data.load('tokenizers/punkt/english.pickle')
+    sents = sent_tokenizer.tokenize(str)
+    return sents
+
+def check_neg(word):
+	print word
+	if (word.startswith('no') or word.startswith('not') or word.startswith('nil') or word.startswith('zero') or word.startswith('nothing') or word.startswith('none') or word.startswith('never'):
+		return True
+	else:
+		return False
+
+def check_sym(word):
+	return data[word]
+
+
+	
+count = 0 
+cond = input('Enter your current conditions and sufferings if any \n') #input 
+ind_sen = sentenizer(cond)
+for num in ind_sen:
+            sym = ''
+            count=0
+            ind_wod = nltk.word_tokenize(ind_sen[num])
+            for t in ind_wod:
+                if(check_neg(t)== True):
+                    count++
+                if(check_sym(t)== 'SYMP'):
+                    sym = t
+            if(sym is not ''):
+                if(count==0):
+                    dis[sym] = 'SYMP'
+                else:
+                    sym = 'no ' + sym
+                    dis[sym] = 'SYMP'
+
+print dis
+
+
+
+            
+                
+            
+ '''           
+##                      
+            
+tok = nltk.word_tokenize(ex2)
+[check(t) for t in 
+
+#pprint.pprint(sents)
+
+
+
+def check(word):
+	print word
+	if (word.startswith('no') or word.startswith('not') or word.startswith('nil') or word.startswith('zero') or word.startswith('nothing') or word.startswith('none') or word.startswith('never'):
+		return True
+	else:
+		return False
+		
+		
+[check(t) for t in tok]
+tok = nltk.word_tokenize(ex2)
+
+data = nltk.defaultdict(int)
+data['sleep'] = 'SYMP'
+data['fever'] = 'SYMP'
+def check1(word):
+	return data[word]
+	
+
+dis = nltk.defaultdict(int)
+
+'''
+
