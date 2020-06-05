@@ -3,7 +3,7 @@ backports-abc==0.5
 backports.functools-lru-cache==1.5
 certifi==2018.10.15
 cycler==0.10.0
-Django==1.11.10
+Django==1.11.29
 functools32==3.2.3.post2
 future==0.17.1
 futures==3.2.0
