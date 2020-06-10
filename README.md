@@ -1,10 +1,10 @@
 **Environment**
-	1. Windows 10 (64-bit)
-	2. Anaconda 3.7
-	3. django
-	4. nltk
-	5. numpy
-	6. aiml
+* Windows 10 (64-bit)
+* Anaconda 3.7
+* django
+* nltk
+* numpy
+* aiml
 
 **Steps to setup enviornement**
 	1. open command prompt in windows and go to current directory
