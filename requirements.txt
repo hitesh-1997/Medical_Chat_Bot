@@ -1,7 +1,7 @@
 aiml==0.9.1
 backports-abc==0.5
 backports.functools-lru-cache==1.5
-certifi==2018.10.15
+certifi==2022.12.7
 cycler==0.10.0
 Django==1.11.10
 functools32==3.2.3.post2
